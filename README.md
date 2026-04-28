@@ -14,10 +14,11 @@ Nota da Global Solution
 Uso de Substitutiva, caso necessário
 Média semestral
 Média final anual
+
 Verificação de status:
-✅ Aprovado
-📚 Exame
-❌ Reprovado
+Aprovado
+Exame
+Reprovado
 
 Critérios Utilizados
 
