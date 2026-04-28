@@ -4,60 +4,50 @@ RM: 572895
 
 Cálculo de Média Anual FIAP
 
-Este projeto em Python realiza o cálculo completo da média anual de um aluno seguindo o modelo de avaliação da FIAP.
+Este projeto em Python foi desenvolvido para calcular a média anual de um aluno da FIAP, considerando as regras de avaliação dos dois semestres.
 
-Funcionalidades
+O programa solicita as notas do aluno e realiza automaticamente:
 
-O programa permite:
+Média dos Checkpoints (descartando a menor nota)
+Média dos Sprints
+Nota da Global Solution
+Uso de Substitutiva, caso necessário
+Média semestral
+Média final anual
+Verificação de status:
+✅ Aprovado
+📚 Exame
+❌ Reprovado
 
-Calcular a média dos Checkpoints (CPs) descartando a menor nota
-Calcular a média das Sprints (SPs)
-Calcular a média semestral (MS1 e MS2)
-Considerar Global Solution (GS) ou Substitutiva (SUB) caso necessário
-Calcular a Média Final (MF)
-Determinar o status do aluno:
-Aprovado
-Exame
-Reprovado
+Critérios Utilizados
 
-Calcular nova média após exame, se aplicável
-
-Regras de Cálculo
-
-Checkpoints (CP)
-São inseridas 3 notas
+Cada semestre possui:
+3 Checkpoints (CP1, CP2, CP3)
 A menor nota é descartada
-A média é feita com as 2 maiores
+Média das 2 maiores = MCP
 
-Sprints (SP)
-São inseridas 2 notas
-Média simples entre elas
+2 Sprints (SP1 e SP2)
+Média simples = SP
 
-Média Semestral (MS)
+1 Global Solution (GS)
+Peso maior no semestre
 
-Fórmula:
+Fórmula da Média Semestral:
+MS = 0.6 * GS + 0.2 * SP + 0.2 * MCP
 
-MS = (0.6 × GS) + (0.2 × SP) + (0.2 × MCP)
-Caso GS = 0 → usar nota da SUB
-Média Final (MF)
-MF = (0.4 × MS1) + (0.6 × MS2)
-Status do Aluno
-Média Final	Situação
-≥ 6.0	Aprovado
-≥ 4.0 e < 6.0	Exame
-< 4.0	Reprovado
-Exame
+Fórmula da Média Final:
+MF = 0.4 * MS1 + 0.6 * MS2
 
-Se o aluno estiver de exame:
+Resultado Final
 
-MF2 = (MF + EX) / 2
-MF2 ≥ 6 → Aprovado
-MF2 < 6 → Reprovado
+Após calcular a média final:
 
-Como usar
-Execute o código em um ambiente Python (ex: Google Colab ou terminal)
-Insira os valores quando solicitado:
-Notas dos checkpoints
-Notas das sprints
-Nota da Global Solution ou Substitutiva
-Nota do exame (se necessário)
+MF ≥ 6.0 → Aprovado 
+4.0 ≤ MF < 6.0 → Exame 
+MF < 4.0 → Reprovado 
+
+Se o aluno ficar de exame:
+
+MF2 = (EX + MF) / 2
+
+Se MF2 ≥ 6, aprovado.
