@@ -8,17 +8,17 @@ Este projeto em Python foi desenvolvido para calcular a média anual de um aluno
 
 O programa solicita as notas do aluno e realiza automaticamente:
 
-Média dos Checkpoints (descartando a menor nota)
-Média dos Sprints
-Nota da Global Solution
-Uso de Substitutiva, caso necessário
-Média semestral
-Média final anual
+Média dos Checkpoints (descartando a menor nota);
+Média dos Sprints;
+Nota da Global Solution;
+Uso de Substitutiva, caso necessário;
+Média semestral;
+Média final anual.
 
 Verificação de status:
-Aprovado
-Exame
-Reprovado
+Aprovado;
+Exame;
+Reprovado.
 
 Critérios Utilizados
 
